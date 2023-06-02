@@ -1,6 +1,7 @@
 package com.kmc.controller;
 
 import com.kmc.controller.action.Action;
+import com.kmc.controller.action.BoardCheckPassAction;
 import com.kmc.controller.action.BoardCheckPassFormAction;
 import com.kmc.controller.action.BoardListAction;
 import com.kmc.controller.action.BoardViewAction;
@@ -32,6 +33,8 @@ public class ActionFactory {
 			action = new BoardViewAction();
 		} else if(command.equals("board_check_pass_form")) {
 			action = new BoardCheckPassFormAction();
+		} else if(command.equals("board_check_pass")) {
+			action = new BoardCheckPassAction();
 		}
 		return action;
 	}
